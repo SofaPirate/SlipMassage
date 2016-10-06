@@ -1,7 +1,7 @@
 #ifndef BinaryMassenger_h
 #define BinaryMassenger_h
 
-#include "Massenger.h"
+#include "Massenger/Massenger.h"
 
 /// Main BinaryMassenger class.
 class BinaryMassenger : public Massenger
