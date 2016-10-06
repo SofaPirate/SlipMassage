@@ -1,0 +1,3 @@
+[submodule "BinaryMassenger"]
+	path = BinaryMassenger
+	url = https://github.com/SofaPirate/BinaryMassenger
