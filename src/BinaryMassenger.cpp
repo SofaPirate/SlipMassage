@@ -18,9 +18,9 @@ void BinaryMassenger::flush()
   _slipEscaping = false;
 }
 
-int8_t BinaryMassenger::nextByte(bool* error) {
-  int8_t v;
-  _nextBlock((uint8_t*)&v, sizeof(int8_t), error);
+uint8_t BinaryMassenger::nextByte(bool* error) {
+  uint8_t v;
+  _nextBlock((uint8_t*)&v, sizeof(uint8_t), error);
   return v;
 }
 
