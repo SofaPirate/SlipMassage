@@ -34,6 +34,15 @@ public:
     _nextIndex = 0;
   }
 
+  size_t size() {
+    return _messageSize;
+  }
+
+  const uint8_t * buffer  () const { 
+    return _buffer; 
+  }
+
+
   // Virtual destructor.
   virtual ~MassagePacker() {}
 
@@ -54,9 +63,13 @@ public:
 
   /// Ends the sending of a message.
   virtual void endPacket() = 0;
+/*
+  void streamPacket(Stream* stream) {
+     stream->write( buffer() , size() );
+  }
+*/
 
-
-  /// Create a packetwith no arguments.
+  /// Create a packet with no arguments.
   virtual void packEmpty(const char *address)
   {
     beginPacket(address);
@@ -95,13 +108,42 @@ public:
     endPacket();
   }
 
-  size_t size() {
-    return _messageSize;
+/*
+  /// Create a packetwith no arguments.
+  virtual void streamEmpty(Stream* stream, const char *address)
+  {
+    packEmpty(address);
+    streamPacket(stream);
   }
 
-const char* buffer  () const { 
-  return _buffer; 
-}
+  /// Create a packetwith single byte value.
+  virtual void streamOneByte(Stream* stream,const char *address, uint8_t value)
+  {
+    packOneByte(address, value);
+    streamPacket(stream);
+  }
+
+  /// Create a packet with single int value.
+  virtual void streamOneInt(Stream* stream,const char *address, int16_t value)
+  {
+    packOneInt(address, value);
+    streamPacket(stream);
+  }
+
+  /// Create a packet with single long value.
+  virtual void streamOneLong(Stream* stream,const char *address, int32_t value)
+  {
+    packOneLong(address, value);
+    streamPacket(stream);
+  }
+
+    /// Create a packet with single float value.
+  virtual void streamOneFloat(Stream* stream,const char *address, float value)
+  {
+    packOneFloat(address, value);
+    streamPacket(stream);
+  }
+*/
 
   protected:
      // Writes single byte to buffer (returns false if buffer is full and cannot be written to).
@@ -125,7 +167,7 @@ const char* buffer  () const {
 
 
   // Buffer that holds the data for current message to be sent.
-  char _buffer[MASSAGE_PACKER_BUFFERSIZE];
+  uint8_t _buffer[MASSAGE_PACKER_BUFFERSIZE];
 
 
 };

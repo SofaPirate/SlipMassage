@@ -13,7 +13,8 @@ SlipMassageParser::SlipMassageParser() {
 void SlipMassageParser::flush()
 {
   MassageParser::flush();
-  _parsedAddress = _slipEscaping = false;
+  _parsedAddress = false;
+   _slipEscaping = false;
 }
 
 int8_t SlipMassageParser::nextByte(bool* error) {
@@ -60,6 +61,9 @@ bool SlipMassageParser::_decode(int streamByte)
 
     // only process this if we are *not* at beginning
      if (_messageSize > 0)   {
+     	 _parsedAddress = false;
+   		_slipEscaping = false;
+
       return true;
      } 
      //flush();
@@ -84,10 +88,16 @@ bool SlipMassageParser::_decode(int streamByte)
           if ( _parsedAddress == false && streamByte == 0 ) {
             _parsedAddress = true;
             _store(0);
-            _nextIndex = _messageSize+1;
+            _nextIndex = _messageSize;
+           
+            // ANYTHING ELSE
           }  else {
              _store(streamByte);
-          }         
+          }
+         // Serial.write(255);
+          // Serial.write(streamByte);
+          // Serial.write(_parsedAddress); 
+          // Serial.write(_nextIndex);         
         }
     }
   }
@@ -96,9 +106,11 @@ bool SlipMassageParser::_decode(int streamByte)
 }
 
 bool SlipMassageParser::_hasNext() const {
+	
   return (_nextIndex < _messageSize);
 }
 
+/*
 bool SlipMassageParser::_updateNextIndex()
 {
   while (_buffer[_nextIndex] != 0)
@@ -106,7 +118,7 @@ bool SlipMassageParser::_updateNextIndex()
   _nextIndex++;
   return (_nextIndex < _messageSize);
 }
-
+*/
 void SlipMassageParser::_nextBlock(uint8_t* value, size_t n, bool* error)
 {
   // Check for errors.

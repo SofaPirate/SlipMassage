@@ -16,10 +16,9 @@ void loop() {
   Serial.write(outbound.buffer(), outbound.size() );
   delay(500);
 */
-   while ( Serial.available() ) {
-    // PARSE INPUT AND EXECUTRE massageReceived IF A COMPLETE MASSAGE IS RECEIVED 
-    inbound.parse( Serial.read() , massageReceived );
-  }
+// PARSE INPUT AND EXECUTRE massageReceived IF A COMPLETE MASSAGE IS RECEIVED 
+   while ( Serial.available() ) inbound.parse( Serial.read() , massageReceived );
+  
 }
 
 

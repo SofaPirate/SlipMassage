@@ -32,7 +32,7 @@ protected:
 
 private:
   // Moves nextIndex to the next token.
-  bool _updateNextIndex();
+ // bool _updateNextIndex();
 
   // Returns true iff it is still possible to call next*().
   bool _hasNext() const;
