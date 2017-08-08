@@ -1,2 +1,2 @@
-# BinaryMassenger
-Binary (SLIP) implementationof the Massenger API (https://github.com/SofaPirate/Massenger)
+# BinaryMassage
+Binary (SLIP) implementation of the [Massage API](https://github.com/SofaPirate/Massenger)
