@@ -1,10 +1,10 @@
 #include "SlipMassagePacker.h"
 
 // Internal. SLIP reserved codes.
-#define BINARY_MASSENGER_SLIP_END     0xC0
-#define BINARY_MASSENGER_SLIP_ESC     0xDB
-#define BINARY_MASSENGER_SLIP_ESC_END 0xDC
-#define BINARY_MASSENGER_SLIP_ESC_ESC 0xDD
+#define SLIP_MASSAGE_END     0xC0
+#define SLIP_MASSAGE_ESC     0xDB
+#define SLIP_MASSAGE_ESC_END 0xDC
+#define SLIP_MASSAGE_ESC_ESC 0xDD
 
 SlipMassagePacker::SlipMassagePacker(){ 
   _slipEscaping = false; 
@@ -15,7 +15,7 @@ void SlipMassagePacker::beginPacket(const char* address)
 
   flush();
 
-  _store(BINARY_MASSENGER_SLIP_END);
+  _store(SLIP_MASSAGE_END);
 
 
  const char* ptr = address;
@@ -53,7 +53,7 @@ void SlipMassagePacker::addFloat(float value)
 
 void SlipMassagePacker::endPacket()
 {
-  _store(BINARY_MASSENGER_SLIP_END);
+  _store(SLIP_MASSAGE_END);
 }
 
 
@@ -65,13 +65,13 @@ void SlipMassagePacker::_dataToSlip(void* data, size_t n)
     uint8_t value = *ptr++;
     switch (value)
     {
-      case BINARY_MASSENGER_SLIP_END:
-        _store(BINARY_MASSENGER_SLIP_ESC);
-        _store(BINARY_MASSENGER_SLIP_ESC_END);
+      case SLIP_MASSAGE_END:
+        _store(SLIP_MASSAGE_ESC);
+        _store(SLIP_MASSAGE_ESC_END);
         break;
-      case BINARY_MASSENGER_SLIP_ESC:
-        _store(BINARY_MASSENGER_SLIP_ESC);
-        _store(BINARY_MASSENGER_SLIP_ESC_ESC);
+      case SLIP_MASSAGE_ESC:
+        _store(SLIP_MASSAGE_ESC);
+        _store(SLIP_MASSAGE_ESC_ESC);
         break;
       default:
         _store(value);

@@ -1,10 +1,10 @@
 #include "SlipMassageParser.h"
 
 // Internal. SLIP reserved codes.
-#define BINARY_MASSENGER_SLIP_END     0xC0
-#define BINARY_MASSENGER_SLIP_ESC     0xDB
-#define BINARY_MASSENGER_SLIP_ESC_END 0xDC
-#define BINARY_MASSENGER_SLIP_ESC_ESC 0xDD
+#define SLIP_MASSAGE_END     0xC0
+#define SLIP_MASSAGE_ESC     0xDB
+#define SLIP_MASSAGE_ESC_END 0xDC
+#define SLIP_MASSAGE_ESC_ESC 0xDD
 
 SlipMassageParser::SlipMassageParser() { 
   flush();
@@ -53,11 +53,11 @@ bool SlipMassageParser::_decode(int streamByte)
   if (_messageSize >= MASSAGE_PARSER_BUFFERSIZE) {
     // NOT SURE ABOUT THIS!
     _messageSize = MASSAGE_PARSER_BUFFERSIZE;
-    return true;
+    return false;
   }
 
   // Process byte.
-  if ( streamByte == BINARY_MASSENGER_SLIP_END ) {
+  if ( streamByte == SLIP_MASSAGE_END ) {
 
     // only process this if we are *not* at beginning
      if (_messageSize > 0)   {
@@ -71,17 +71,17 @@ bool SlipMassageParser::_decode(int streamByte)
   } else {
      if (  _slipEscaping  ) {
        switch (streamByte) {
-          case BINARY_MASSENGER_SLIP_ESC_END:
-            _store(BINARY_MASSENGER_SLIP_END);
+          case SLIP_MASSAGE_ESC_END:
+            _store(SLIP_MASSAGE_END);
             break;
-          case BINARY_MASSENGER_SLIP_ESC_ESC:
-            _store(BINARY_MASSENGER_SLIP_ESC);
+          case SLIP_MASSAGE_ESC_ESC:
+            _store(SLIP_MASSAGE_ESC);
             break;
        }
         _slipEscaping = false;
     } else {
        // NORMAL DATA
-        if ( streamByte == BINARY_MASSENGER_SLIP_ESC ) {
+        if ( streamByte == SLIP_MASSAGE_ESC ) {
           _slipEscaping  = true;
         } else {
           // ADRRESS END

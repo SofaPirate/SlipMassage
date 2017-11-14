@@ -22,8 +22,7 @@ void massageReceived() {
     outbound.addByte(b3);
     outbound.streamPacket(&Serial);
 
-    
-
+   
   }
 
 }
