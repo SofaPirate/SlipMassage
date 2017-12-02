@@ -38,6 +38,31 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"bgcolor" : [ 0.376471, 0.384314, 0.4, 0.0 ],
+					"bgcolor2" : [ 0.376471, 0.384314, 0.4, 0.0 ],
+					"bgfillcolor_angle" : 270.0,
+					"bgfillcolor_autogradient" : 0.0,
+					"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 0.0 ],
+					"bgfillcolor_color1" : [ 0.376471, 0.384314, 0.4, 0.0 ],
+					"bgfillcolor_color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+					"bgfillcolor_proportion" : 0.39,
+					"bgfillcolor_type" : "color",
+					"gradient" : 1,
+					"id" : "obj-3",
+					"linecount" : 9,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 824.0, 6.0, 436.0, 133.0 ],
+					"style" : "",
+					"text" : "pixels 51 51 51 51 51 51 51 51 51 51 51 51 51 51 51 171 162 156 167 159 153 168 160 154 168 160 154 168 160 154 172 164 155 172 164 155 171 163 154 170 162 153 171 163 154 173 165 158 173 165 158 172 164 157 171 163 154 171 163 154 173 165 156 173 165 157 170 162 153 172 162 154 61 57 51 13 14 7 7 8 1 6 7 0 7 9 0 8 10 0 7 7 0 14 14 3 15 14 3 17 17 1 31 30 19 36 36 17 39 41 16 50 51 32 168 161 150 171 163 152 171 163 152 172 163 152 172 163 152 170 162 153 169 161 152 167 159 150 170 162 151 171 164 153 170 160 152 169 159 151 170 160 152 168 158 150 166 156 148 169 158 152 165 155 149 163 153 147 51 51 51 51 51 51 51 51 51 51 51 51",
+					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"clipheight" : 29.0,
 					"data" : 					{
 						"clips" : [ 							{
@@ -48,36 +73,36 @@
 									"outputmode" : [ 1 ],
 									"out_name" : [ "u836000476" ],
 									"dim" : [ 1, 1 ],
-									"usesrcrect" : [ 0 ],
-									"autostart" : [ 1 ],
-									"looppoints" : [ 0, 0 ],
-									"texture_name" : [ "u465000474" ],
-									"engine" : [ "viddll" ],
-									"framereport" : [ 0 ],
-									"adapt" : [ 1 ],
-									"output_texture" : [ 0 ],
-									"vol" : [ 1.0 ],
-									"duration" : [ 0 ],
-									"loopstart" : [ 0 ],
-									"drawto" : [ "" ],
-									"moviefile" : [ "" ],
-									"unique" : [ 0 ],
-									"colormode" : [ "argb" ],
-									"timescale" : [ 600 ],
-									"loopend" : [ 0 ],
 									"cache_size" : [ 0.1 ],
-									"automatic" : [ 0 ],
-									"usedstrect" : [ 0 ],
-									"loopreport" : [ 0 ],
-									"framecount" : [ 0 ],
+									"rate" : [ 1.0 ],
+									"timescale" : [ 600 ],
+									"engine" : [ "viddll" ],
+									"colormode" : [ "argb" ],
 									"srcrect" : [ 0, 0, 1, 1 ],
 									"position" : [ 0.0 ],
-									"dstrect" : [ 0, 0, 1, 1 ],
-									"rate" : [ 1.0 ],
+									"framecount" : [ 0 ],
+									"autostart" : [ 1 ],
+									"loopstart" : [ 0 ],
 									"interp" : [ 0 ],
 									"time" : [ 0 ],
+									"usedstrect" : [ 0 ],
+									"time_secs" : [ 0.0 ],
 									"fps" : [ 0.0 ],
-									"time_secs" : [ 0.0 ]
+									"automatic" : [ 0 ],
+									"framereport" : [ 0 ],
+									"loopend" : [ 0 ],
+									"dstrect" : [ 0, 0, 1, 1 ],
+									"looppoints" : [ 0, 0 ],
+									"adapt" : [ 1 ],
+									"texture_name" : [ "u465000474" ],
+									"drawto" : [ "" ],
+									"vol" : [ 1.0 ],
+									"loopreport" : [ 0 ],
+									"moviefile" : [ "" ],
+									"unique" : [ 0 ],
+									"duration" : [ 0 ],
+									"usesrcrect" : [ 0 ],
+									"output_texture" : [ 0 ]
 								}
 
 							}
@@ -89,36 +114,36 @@
 									"outputmode" : [ 1 ],
 									"out_name" : [ "u836000476" ],
 									"dim" : [ 1, 1 ],
-									"usesrcrect" : [ 0 ],
-									"autostart" : [ 1 ],
-									"looppoints" : [ 0, 0 ],
-									"texture_name" : [ "u465000474" ],
-									"engine" : [ "viddll" ],
-									"framereport" : [ 0 ],
-									"adapt" : [ 1 ],
-									"output_texture" : [ 0 ],
-									"vol" : [ 1.0 ],
-									"duration" : [ 0 ],
-									"loopstart" : [ 0 ],
-									"drawto" : [ "" ],
-									"moviefile" : [ "" ],
-									"unique" : [ 0 ],
-									"colormode" : [ "argb" ],
-									"timescale" : [ 600 ],
-									"loopend" : [ 0 ],
 									"cache_size" : [ 0.1 ],
-									"automatic" : [ 0 ],
-									"usedstrect" : [ 0 ],
-									"loopreport" : [ 0 ],
-									"framecount" : [ 0 ],
+									"rate" : [ 1.0 ],
+									"timescale" : [ 600 ],
+									"engine" : [ "viddll" ],
+									"colormode" : [ "argb" ],
 									"srcrect" : [ 0, 0, 1, 1 ],
 									"position" : [ 0.0 ],
-									"dstrect" : [ 0, 0, 1, 1 ],
-									"rate" : [ 1.0 ],
+									"framecount" : [ 0 ],
+									"autostart" : [ 1 ],
+									"loopstart" : [ 0 ],
 									"interp" : [ 0 ],
 									"time" : [ 0 ],
+									"usedstrect" : [ 0 ],
+									"time_secs" : [ 0.0 ],
 									"fps" : [ 0.0 ],
-									"time_secs" : [ 0.0 ]
+									"automatic" : [ 0 ],
+									"framereport" : [ 0 ],
+									"loopend" : [ 0 ],
+									"dstrect" : [ 0, 0, 1, 1 ],
+									"looppoints" : [ 0, 0 ],
+									"adapt" : [ 1 ],
+									"texture_name" : [ "u465000474" ],
+									"drawto" : [ "" ],
+									"vol" : [ 1.0 ],
+									"loopreport" : [ 0 ],
+									"moviefile" : [ "" ],
+									"unique" : [ 0 ],
+									"duration" : [ 0 ],
+									"usesrcrect" : [ 0 ],
+									"output_texture" : [ 0 ]
 								}
 
 							}
@@ -266,14 +291,14 @@
 					"bgfillcolor_type" : "color",
 					"gradient" : 1,
 					"id" : "obj-66",
-					"linecount" : 8,
+					"linecount" : 9,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 122.0, 537.0, 431.5, 119.0 ],
+					"patching_rect" : [ 122.0, 537.0, 434.0, 133.0 ],
 					"style" : "",
-					"text" : "217 79 32 208 66 18 240 87 35 195 62 10 146 41 4 110 13 0 119 67 29 145 156 54 106 149 16 107 154 31 113 166 29 122 176 34 121 178 27 123 183 32 126 196 45 106 46 0 158 42 15 167 39 5 189 56 10 201 64 13 216 61 8 225 67 16 234 84 26 223 76 17 232 74 22 235 73 15 237 77 18 235 68 13 212 67 18 141 39 0 90 85 55 60 66 40 94 77 40 35 25 13 6 5 0 33 0 0 37 2 1 24 9 4 22 19 20 34 35 37 23 23 24 17 13 16 11 7 12 12 13 10 108 63 62 40 25 20 17 11 4 35 29 19 159 151 138 217 210 195 206 202 186 83 86 64 55 58 39 122 121 114 160 159 167 176 179 199 163 181 199 253 255 255 246 253 253 164 182 201",
+					"text" : "51 51 51 51 51 51 51 51 51 51 51 51 51 51 51 171 162 156 167 159 153 168 160 154 168 160 154 168 160 154 172 164 155 172 164 155 171 163 154 170 162 153 171 163 154 173 165 158 173 165 158 172 164 157 171 163 154 171 163 154 173 165 156 173 165 157 170 162 153 172 162 154 61 57 51 13 14 7 7 8 1 6 7 0 7 9 0 8 10 0 7 7 0 14 14 3 15 14 3 17 17 1 31 30 19 36 36 17 39 41 16 50 51 32 168 161 150 171 163 152 171 163 152 172 163 152 172 163 152 170 162 153 169 161 152 167 159 150 170 162 151 171 164 153 170 160 152 169 159 151 170 160 152 168 158 150 166 156 148 169 158 152 165 155 149 163 153 147 51 51 51 51 51 51 51 51 51 51 51 51",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -297,7 +322,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 597.5, 380.0, 144.5, 22.0 ],
 					"style" : "",
-					"text" : "srcdimend 640 240.",
+					"text" : "srcdimend 587 187.",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -321,7 +346,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 423.0, 380.0, 144.5, 22.0 ],
 					"style" : "",
-					"text" : "srcdimstart 0 240.",
+					"text" : "srcdimstart 0 187.",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -961,6 +986,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
+					"order" : 1,
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 1 ],
+					"order" : 0,
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -1112,7 +1146,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-66", 1 ],
-					"midpoints" : [ 384.5, 522.0, 544.0, 522.0 ],
+					"midpoints" : [ 384.5, 522.0, 546.5, 522.0 ],
 					"order" : 1,
 					"source" : [ "obj-60", 0 ]
 				}
@@ -1139,20 +1173,20 @@
 		"dependency_cache" : [ 			{
 				"name" : "tof.serial.maxpat",
 				"bootpath" : "~/Documents/Max 7/Packages/tof74/patchers",
-				"patcherrelativepath" : "../../../../Max 7/Packages/tof74/patchers",
+				"patcherrelativepath" : "../../../../../Max 7/Packages/tof74/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "slipmassage.pack.bytes.maxpat",
-				"bootpath" : "~/Documents/Arduino/libraries/SlipMassage/test",
+				"bootpath" : "~/Documents/Arduino/libraries/SlipMassage/extras/slipMassage_neopixels Max 7",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "slipmassage.unpack.maxpat",
-				"bootpath" : "~/Documents/Arduino/libraries/SlipMassage/test",
+				"bootpath" : "~/Documents/Arduino/libraries/SlipMassage/extras/slipMassage_neopixels Max 7",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
