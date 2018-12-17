@@ -41,7 +41,7 @@ private:
   void _nextBlock(uint8_t* value, size_t n, bool* error);
 
   // Index in the buffer of next argument to read.
-  uint8_t _nextIndex;
+  size_t _nextIndex;
 
   bool _slipEscaping;
 

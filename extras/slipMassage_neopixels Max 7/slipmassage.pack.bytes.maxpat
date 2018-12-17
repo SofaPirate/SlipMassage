@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 3,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 439.0, 190.0, 640.0, 480.0 ],
+		"rect" : [ 439.0, 190.0, 1515.0, 880.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -82,9 +82,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 240.0, 159.0, 40.0, 22.0 ],
+					"patching_rect" : [ 240.0, 159.0, 138.0, 22.0 ],
 					"style" : "",
-					"text" : "zl reg"
+					"text" : "zl reg @zlmaxsize 1500"
 				}
 
 			}
@@ -95,9 +95,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 184.0, 99.0, 57.0, 22.0 ],
+					"patching_rect" : [ 184.0, 99.0, 155.0, 22.0 ],
 					"style" : "",
-					"text" : "zl slice 1"
+					"text" : "zl slice 1 @zlmaxsize 1500"
 				}
 
 			}
@@ -172,9 +172,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 310.0, 703.0, 77.0, 22.0 ],
+					"patching_rect" : [ 301.0, 712.0, 181.0, 22.0 ],
 					"style" : "",
-					"text" : "zl group 256"
+					"text" : "zl group 1500 @zlmaxsize 1500"
 				}
 
 			}
@@ -217,7 +217,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "bang", "" ],
-					"patching_rect" : [ 264.0, 523.0, 73.0, 22.0 ],
+					"patching_rect" : [ 277.0, 508.0, 73.0, 22.0 ],
 					"style" : "",
 					"text" : "sel 192 219"
 				}
@@ -287,11 +287,11 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-2",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 319.0, 738.0, 25.0, 25.0 ],
+					"patching_rect" : [ 306.0, 761.0, 25.0, 25.0 ],
 					"style" : ""
 				}
 
@@ -300,7 +300,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-1",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -514,9 +514,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [  ],
-		"autosave" : 0
+ ]
 	}
 
 }

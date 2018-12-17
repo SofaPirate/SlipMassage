@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 3,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -95,7 +95,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "int" ],
-					"patching_rect" : [ 86.0, 301.0, 30.0, 22.0 ],
+					"patching_rect" : [ 81.0, 355.0, 30.0, 22.0 ],
 					"style" : "",
 					"text" : "t l 3"
 				}
@@ -121,9 +121,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 72.0, 252.0, 53.0, 22.0 ],
+					"patching_rect" : [ 39.0, 305.0, 181.0, 22.0 ],
 					"style" : "",
-					"text" : "zl group"
+					"text" : "zl group 1500 @zlmaxsize 1500"
 				}
 
 			}
@@ -251,9 +251,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 233.800003, 504.600006, 77.0, 22.0 ],
+					"patching_rect" : [ 233.800003, 504.600006, 181.0, 22.0 ],
 					"style" : "",
-					"text" : "zl.group 256"
+					"text" : "zl.group 1500 @zlmaxsize 1500"
 				}
 
 			}
@@ -261,7 +261,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-2",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -274,7 +274,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-1",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -488,9 +488,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [  ],
-		"autosave" : 0
+ ]
 	}
 
 }
